@@ -1,0 +1,24 @@
+% Encoding: UTF-8
+
+@Book{creighton2010unity,
+  author    = {Creighton, Ryan Henson},
+  title     = {Unity 3D game development by example: A Seat-of-your-pants manual for building fun, groovy little games quickly},
+  year      = {2010},
+  publisher = {Packt Publishing Ltd},
+}
+
+@Book{blackman2013beginning,
+  author    = {Blackman, Sue},
+  title     = {Beginning 3D Game Development with Unity 4: All-in-one, multi-platform game development},
+  year      = {2013},
+  publisher = {Apress},
+}
+
+@Book{zerbst20043d,
+  author    = {Zerbst, Stefan and Duvel, Oliver},
+  title     = {3D Game Engine Programming (Game Development Series)},
+  year      = {2004},
+  publisher = {Premier Press},
+}
+
+@Comment{jabref-meta: databaseType:biblatex;}
