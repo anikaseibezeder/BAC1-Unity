@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6650 64-bit) (preloaded format=pdflatex 2018.4.6)  20 APR 2018 11:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6650 64-bit) (preloaded format=pdflatex 2018.4.6)  24 APR 2018 15:38
 entering extended mode
 **./main.tex
 (main.tex
@@ -1618,12 +1618,9 @@ Package biblatex Info: ... file 'german.lbx' found.
 ("C:\Users\Anika\AppData\Local\Programs\MiKTeX 2.9\tex\latex\biblatex\lbx\germa
 n.lbx"
 File: german.lbx 2018/03/04 v3.11 biblatex localization (PK/MW)
-)) (main.aux (front/preface.aux) (front/abstract.aux)
-(front/kurzfassung.aux) (chapters/introduction.aux) (chapters/thethesis.aux)
-(chapters/latex.aux) (chapters/figures.aux) (chapters/mathematics.aux)
-(chapters/literature.aux) (chapters/printing.aux) (chapters/closing.aux)
-(back/appendix_a.aux) (back/appendix_b.aux) (back/appendix_c.aux)
-(back/appendix_d.aux) (back/printbox.aux))
+)) (main.aux (chapters/introduction.aux) (chapters/environment.aux)
+(chapters/character.aux) (chapters/animations.aux) (chapters/comparing.aux)
+(chapters/summary.aux))
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 44.
@@ -1745,18 +1742,21 @@ Package biblatex Info: Automatic encoding selection.
 \openout4 = `main.bcf'.
 
 Package biblatex Info: Trying to load bibliographic data...
-Package biblatex Info: ... file 'main.bbl' not found.
+Package biblatex Info: ... file 'main.bbl' found.
+ (main.bbl
 
-No file main.bbl.
+Package biblatex Warning: The following entry could not be found
+(biblatex)                in the database:
+(biblatex)                Drake1948
+(biblatex)                Please verify the spelling and rerun
+(biblatex)                LaTeX afterwards.
 
-Package biblatex Warning: citation 'Drake1948' was not found at all in the .bbl
-, bibliography labels cannot be generated, please correct the citation.
-
+)
 Package biblatex Info: Reference section=0 on input line 44.
 Package biblatex Info: Reference segment=0 on input line 44.
 Package hyperref Info: Option `pageanchor' set `false' on input line 51.
 LaTeX Font Info:    Try loading font information for T1+lmss on input line 51.
-("C:\Users\Anika\AppData\Local\Programs\MiKTeX 2.9\tex\latex\lm\t1lmss.fd"
+ ("C:\Users\Anika\AppData\Local\Programs\MiKTeX 2.9\tex\latex\lm\t1lmss.fd"
 File: t1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Try loading font information for OT1+lmr on input line 51.
@@ -1786,7 +1786,7 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 51.
 ("C:\Users\Anika\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-<images/logo.pdf, id=76, 269.93045pt x 269.93045pt>
+<images/logo.pdf, id=40, 269.93045pt x 269.93045pt>
 File: images/logo.pdf Graphic file (type pdf)
 <use images/logo.pdf>
 Package pdftex.def Info: images/logo.pdf  used on input line 51.
@@ -1807,202 +1807,109 @@ Package hyperref Info: Option `pageanchor' set `true' on input line 51.
  [4
 
 ]
-\openout2 = `front/preface.aux'.
-
- (front/preface.tex) [5
-
-
-]
-\openout2 = `front/abstract.aux'.
-
- (front/abstract.tex)
-[6
-
-
-
-]
-\openout2 = `front/kurzfassung.aux'.
-
- (front/kurzfassung.tex) [7
-
-
-
-]
 \openout2 = `chapters/introduction.aux'.
 
  (chapters/introduction.tex
 Chapter 1.
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--11
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--11
+
+ []
+
 ) [1
 
 
 
-
 ]
-\openout2 = `chapters/thethesis.aux'.
+\openout2 = `chapters/environment.aux'.
 
- (chapters/thethesis.tex
+ (chapters/environment.tex
 Chapter 2.
 ) [2
 
 
 
 ]
-\openout2 = `chapters/latex.aux'.
+\openout2 = `chapters/character.aux'.
 
- (chapters/latex.tex
+ (chapters/character.tex
 Chapter 3.
 ) [3
 
 
 
 ]
-\openout2 = `chapters/figures.aux'.
+\openout2 = `chapters/animations.aux'.
 
- (chapters/figures.tex
+ (chapters/animations.tex
 Chapter 4.
 ) [4
 
 
 
 ]
-\openout2 = `chapters/mathematics.aux'.
+\openout2 = `chapters/comparing.aux'.
 
- (chapters/mathematics.tex
+ (chapters/comparing.tex
 Chapter 5.
 ) [5
 
 
 
 ]
-\openout2 = `chapters/literature.aux'.
+\openout2 = `chapters/summary.aux'.
 
- (chapters/literature.tex
+ (chapters/summary.tex
 Chapter 6.
-
-LaTeX Warning: Citation 'Drake1948' on page 6 undefined on input line 5.
-
 ) [6
 
 
 
 ]
-\openout2 = `chapters/printing.aux'.
 
- (chapters/printing.tex
-Chapter 7.
-) [7
+LaTeX Warning: Empty bibliography on input line 68.
 
-
-
-]
-\openout2 = `chapters/closing.aux'.
-
- (chapters/closing.tex
-Chapter 8.
-) [8
-
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 70.
+[7
 
 
 ]
-\openout2 = `back/appendix_a.aux'.
-
- (back/appendix_a.tex
-Appendix A.
-) [9
-
-
-
-]
-\openout2 = `back/appendix_b.aux'.
-
- (back/appendix_b.tex
-Appendix B.
-) [10
-
-
-
-]
-\openout2 = `back/appendix_c.aux'.
-
- (back/appendix_c.tex
-Appendix C.
-) [11
-
-
-
-]
-\openout2 = `back/appendix_d.aux'.
-
- (back/appendix_d.tex
-Appendix D.
-) [12
-
-
-
-]
-
-LaTeX Warning: Empty bibliography on input line 83.
-
-[13
-
-
-]
-\openout2 = `back/printbox.aux'.
-
- (back/printbox.tex
-LaTeX Font Info:    External font `cmex7' loaded for size
-(Font)              <5> on input line 8.
-) [14
-
-
-]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 88.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 88.
- (main.aux (front/preface.aux) (front/abstract.aux) (front/kurzfassung.aux) (ch
-apters/introduction.aux) (chapters/thethesis.aux)
-(chapters/latex.aux) (chapters/figures.aux) (chapters/mathematics.aux)
-(chapters/literature.aux) (chapters/printing.aux) (chapters/closing.aux)
-(back/appendix_a.aux) (back/appendix_b.aux) (back/appendix_c.aux)
-(back/appendix_d.aux) (back/printbox.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 88.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 88.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 70.
+ (main.aux (chapters/introduction.aux) (chapters/environment.aux)
+(chapters/character.aux) (chapters/animations.aux) (chapters/comparing.aux)
+(chapters/summary.aux))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 70.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 70.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 7D7C39D500BECF3AA7A298CD87A65C3C;2124.
-
-
-LaTeX Warning: There were undefined references.
-
-
-Package biblatex Warning: Please (re)run Biber on the file:
-(biblatex)                main
-(biblatex)                and rerun LaTeX afterwards.
-
+(rerunfilecheck)             Checksum: FF779A61E48C173BC385DB824612DF34;1071.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 25625 strings out of 493305
- 409184 string characters out of 3129803
- 958138 words of memory out of 3000000
- 28515 multiletter control sequences out of 15000+200000
- 65844 words of font info for 59 fonts, out of 3000000 for 9000
+ 25308 strings out of 493305
+ 401384 string characters out of 3129803
+ 914899 words of memory out of 3000000
+ 28312 multiletter control sequences out of 15000+200000
+ 48640 words of font info for 45 fonts, out of 3000000 for 9000
  1143 hyphenation exceptions out of 8191
  67i,11n,96p,1098b,2269s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Users/Anika/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm-rm.en
-c}{C:/Users/Anika/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.en
+{C:/Users/Anika/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.en
 c}<C:/Users/Anika/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmbx1
 0.pfb><C:/Users/Anika/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/l
 mr10.pfb><C:/Users/Anika/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/l
-m/lmr12.pfb><C:/Users/Anika/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publi
-c/lm/lmr9.pfb><C:/Users/Anika/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pub
-lic/lm/lmss10.pfb><C:/Users/Anika/AppData/Local/Programs/MiKTeX 2.9/fonts/type1
-/public/lm/lmss12.pfb><C:/Users/Anika/AppData/Local/Programs/MiKTeX 2.9/fonts/t
-ype1/public/lm/lmss17.pfb><C:/Users/Anika/AppData/Local/Programs/MiKTeX 2.9/fon
-ts/type1/public/lm/lmssbx10.pfb>
-Output written on main.pdf (21 pages, 245446 bytes).
+m/lmss10.pfb><C:/Users/Anika/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publ
+ic/lm/lmss12.pfb><C:/Users/Anika/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/
+public/lm/lmss17.pfb><C:/Users/Anika/AppData/Local/Programs/MiKTeX 2.9/fonts/ty
+pe1/public/lm/lmssbx10.pfb>
+Output written on main.pdf (11 pages, 174282 bytes).
 PDF statistics:
- 240 PDF objects out of 1000 (max. 8388607)
- 39 named destinations out of 1000 (max. 500000)
- 162 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 136 PDF objects out of 1000 (max. 8388607)
+ 19 named destinations out of 1000 (max. 500000)
+ 90 words of extra memory for PDF output out of 10000 (max. 10000000)
 

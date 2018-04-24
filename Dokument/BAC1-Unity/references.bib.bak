@@ -14,11 +14,4 @@
   publisher = {Apress},
 }
 
-@Book{zerbst20043d,
-  author    = {Zerbst, Stefan and Duvel, Oliver},
-  title     = {3D Game Engine Programming (Game Development Series)},
-  year      = {2004},
-  publisher = {Premier Press},
-}
-
 @Comment{jabref-meta: databaseType:biblatex;}

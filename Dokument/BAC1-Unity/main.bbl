@@ -1,0 +1,68 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.9 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global}
+    \entry{labschutz2011content}{article}{}
+      \name{author}{5}{}{%
+        {{hash=bf9c80999662d00037f970eebed20113}{%
+           family={Labsch{u}tz},
+           familyi={L\bibinitperiod},
+           given={Matthias},
+           giveni={M\bibinitperiod}}}%
+        {{hash=11cb5673dd59bee10123c201ce1e7cc3}{%
+           family={Kr{o}sl},
+           familyi={K\bibinitperiod},
+           given={Katharina},
+           giveni={K\bibinitperiod}}}%
+        {{hash=05907486fa159294b48ba0272d4ca149}{%
+           family={Aquino},
+           familyi={A\bibinitperiod},
+           given={Mariebeth},
+           giveni={M\bibinitperiod}}}%
+        {{hash=44a68ae1955339d565a83fe586b507e1}{%
+           family={Grash{a}ftl},
+           familyi={G\bibinitperiod},
+           given={Florian},
+           giveni={F\bibinitperiod}}}%
+        {{hash=b7425d8a60e2fecacbe4c6763c7d79be}{%
+           family={Kohl},
+           familyi={K\bibinitperiod},
+           given={Stephanie},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{08f9b1d59f822347fbdd43d6a7459bcf}
+      \strng{fullhash}{8546ad6dd24f715ec2457bb525dfb1be}
+      \strng{bibnamehash}{08f9b1d59f822347fbdd43d6a7459bcf}
+      \strng{authorbibnamehash}{08f9b1d59f822347fbdd43d6a7459bcf}
+      \strng{authornamehash}{08f9b1d59f822347fbdd43d6a7459bcf}
+      \strng{authorfullhash}{8546ad6dd24f715ec2457bb525dfb1be}
+      \field{sortinit}{L}
+      \field{sortinithash}{2c7981aaabc885868aba60f0c09ee20f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Institute of Computer Graphics and Algorithms, Vienna University of Technology}
+      \field{title}{Content creation for a 3D game with Maya and Unity 3D}
+      \field{year}{2011}
+    \endentry
+  \enddatalist
+  \missing{Drake1948}
+\endrefsection
+\endinput
+
