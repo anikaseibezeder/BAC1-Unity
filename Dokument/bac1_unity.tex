@@ -71,12 +71,12 @@ With Unity3D the user interaction can be easily made by implementing scripts and
 
 \subsection{Adding a Character}
 
-In Unity3D adding a character is easily done by Dragging a Prefab or an object into the middle screen to the wanted position. There is also another possibility by Dragging the Prefab or object to the left side of the screen, where all used objects are shown. A Prefab is a pre-built object combined of one to many components \cite{b2}. When downloading the Unity3D editor some prefabs are already given and can be used as is.
+In Unity3D adding a character is easily done by dragging a Prefab or an object into the middle screen to the wanted position. There is also another possibility by dragging the Prefab or object to the left side of the screen, where all used objects are shown. A Prefab is a pre-built object combined of one to many components \cite{b2}. When downloading the Unity3D editor some prefabs are already given and can be used as is.
 To see and edit features of the Prefab or object, a left click on the wanted object on the left side of the screen is needed. 
 
 \begin{figure}[htbp]
   \includegraphics[width=.4\textwidth]{pictures/character_controls_character_components}
-  \caption{Character Components.}
+  \caption{Character Components}
   \label{fig:character_controls_character_components}
 \end{figure}
 
@@ -102,46 +102,30 @@ tabsize=3
 
 \subsection{Scripting in VisualStudio}
 
-A script is simple added by clicking the button "Add Component", choosing "New Script" and selecting the wanted language. After adding the script it can be written by double clicking the component and opening the wanted script editor. \\
-The first thing to know about writing a script for unity is, that the class is extending from the \lstinline!class MonoBehaviour! and is ipmlementing are functions \lstinline!void Start()!, \lstinline!void Update()! and \lstinline!void FixedUpdate()!. 
+A script is simply added by clicking the button "Add Component", choosing "New Script" and selecting the wanted language. After adding the script it can be written by double clicking the component and opening the wanted script editor. \\
+The first thing to know about writing a script for Unity3D is, that the class is extending from the \lstinline!class MonoBehaviour! and is ipmlementing the functions \lstinline!void Start()!, \lstinline!void Update()! and \lstinline!void FixedUpdate()!. 
 The start function is used for variable initialization and one time execution.
 The update function is used for continuous events, like checking which key is pressed, and is updated every frame\cite{b1}. As the user may press other keys while playing the game, the statements for checking the key should be implemented in the update function. Both functions are not necessarily needed but can help building the logic of the game.
 Another important function is \lstinline!void FixedUpdate()!. Like the \lstinline!void Update()! function, it also is updated every frame and it is mainly used when dealing with the Physics of the Object \cite{b1}. \\
-When adding variables there is just a few thing to know: all \lstinline!public! variables are later shown in the component screen and can be edited there. It is also possible to import the other components from the object, the script is added to by using \lstinline!GetComponent<>();!
-
-
-% \begin{lstlisting}
-%   public class HelloServiceImpl
-%   {
-%       public void sayHello()
-%       {
-%           System.out.println( "Hello" );
-%       }
-%   }
-% \end{lstlisting}
+When adding variables there is just a few thing to know: all \lstinline!public! variables are later shown in the component screen and can be edited there. It is also possible to import other components from the object. They are added to by using \lstinline!GetComponent<>()!
 
 \subsection{Cross Platform Input Manager}
 
-The Cross Platform Input Manager can be used to determine how keys or actions should be interpreted. For example there can be an entry considering jumping with a character an
+The Cross Platform Input Manager can be used to determine how keys or actions should be interpreted. For example there can be an entry considering jumping with a character, which defines, that a jump on a Desktop or Laptop is made with pressing the spacebar, while on the smartphone a touch gesture activates the jump. After defining the inputs, they can be used with \lstinline!CrossPlatformInputManager.GetButtonDown("Jump")!. \\
 
-a\\
-d\\
-d\\
-d\\
-a\\
-a\\
-d\\
-d\\
-d\\
-a\\
-a\\
-d\\
-d\\
-d\\
-a\\
-a\\
-d\\
-d\\
+\begin{lstlisting}[caption=Example Implementation for Determining a Jump,label=list:character_controls_jump_implementation]
+private bool isJumping;
+
+private void Update()
+{
+	if (!isJumping)
+	{
+		isJumping = CrossPlatformInputManager.GetButtonDown("Jump");
+	}
+}
+\end{lstlisting}
+
+The code in Listing~\ref{list:character_controls_jump_implementation} shows how to implement the Cross Platform Input Manager in the \lstinline!void Update()! function which is updated every frame. 
 
 \section{Adding Animations}
 
