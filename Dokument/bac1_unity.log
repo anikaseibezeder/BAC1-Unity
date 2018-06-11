@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Arch Linux) (preloaded format=pdflatex 2018.6.3)  11 JUN 2018 03:01
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Arch Linux) (preloaded format=pdflatex 2018.6.3)  11 JUN 2018 03:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -527,6 +527,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 173--174
 
  []
 
+<pictures/keyframes.png, id=30, 88.6512pt x 72.5109pt>
+File: pictures/keyframes.png Graphic file (type png)
+<use pictures/keyframes.png>
+Package pdftex.def Info: pictures/keyframes.png  used on input line 193.
+(pdftex.def)             Requested size: 206.39685pt x 168.8383pt.
+<pictures/animation_states.png, id=31, 205.0059pt x 79.9788pt>
+File: pictures/animation_states.png Graphic file (type png)
+<use pictures/animation_states.png>
+Package pdftex.def Info: pictures/animation_states.png  used on input line 199.
+
+(pdftex.def)             Requested size: 206.39685pt x 80.52289pt.
+[4 <./pictures/character_controls_character_components.JPG> <./pictures/keyfram
+es.png>]
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -538,26 +551,27 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[4 <./pictures/character_controls_character_components.JPG>] (./bac1_unity.aux)
- ) 
+[5
+
+ <./pictures/animation_states.png>] (./bac1_unity.aux) ) 
 Here is how much of TeX's memory you used:
- 5750 strings out of 492982
- 83154 string characters out of 6138580
- 185905 words of memory out of 5000000
- 9218 multiletter control sequences out of 15000+600000
+ 5762 strings out of 492982
+ 83500 string characters out of 6138580
+ 187921 words of memory out of 5000000
+ 9228 multiletter control sequences out of 15000+600000
  43440 words of font info for 94 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,11n,40p,964b,1380s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texmf-dist/fon
-ts/type1/urw/courier/ucrb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/courier/
-ucrr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/
-texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texmf-dist/fonts/type1
-/urw/times/utmr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-
-Output written on bac1_unity.pdf (4 pages, 388217 bytes).
+{/usr/share/texmf-dist/
+fonts/enc/dvips/base/8r.enc}</usr/share/texmf-dist/fonts/type1/urw/courier/ucrb
+8a.pfb></usr/share/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/te
+xmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texmf-dist/fonts/type1/ur
+w/times/utmbi8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></u
+sr/share/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on bac1_unity.pdf (5 pages, 423420 bytes).
 PDF statistics:
- 54 PDF objects out of 1000 (max. 8388607)
- 30 compressed objects within 1 object stream
+ 61 PDF objects out of 1000 (max. 8388607)
+ 32 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 31 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 41 words of extra memory for PDF output out of 10000 (max. 10000000)
 

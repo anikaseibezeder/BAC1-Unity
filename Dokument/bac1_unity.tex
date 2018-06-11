@@ -188,7 +188,18 @@ The code in Listing~\ref{list:character_controls_jump_implementation} shows how 
 
 \section{Adding Animations}
 
-The Unity editor supports various ways of adding animations to an object. The object can be simple, like a sphere, or complex, like a humanoid character with multiple joints.
+The Unity editor supports various ways of adding animations to an object. The object can be simple, like a sphere, or complex, like a humanoid character with multiple joints. Animations can be implemented by setting keyframes in the "Animation" tab. Defining new keyframes is done by clicking the record button next to the media controls and moving the time cursor to the desired frame (e.g. frame 60). Any changes made to the object in the scene, for instance scaling or rotating, will now be recorded and saved to this keyframe (60). The transitioning frames between the keyframes are generated automatically by the editor. After setting the keyframe the animation can be previewed by clicking the play button in the media controls. In figure~\ref{fig:adding_animations_keyframes} there is one starting keyframe at position 0.
+\begin{figure}[htbp]
+  \includegraphics[width=.4\textwidth]{pictures/keyframes}
+  \caption{Keyframes}
+  \label{fig:adding_animations_keyframes}
+\end{figure}
+\newline Multiple animations can be added to an object using state machines. State machines allow for complex transitions and event driven animations. The Unity editor provides a colored graphical overview for managing these transitions using semantics similar to state diagrams. Figure~\ref{fig:adding_animations_state_machines} shows the graphical overview of a simple state transition between to animations.
+\begin{figure}[htbp]
+  \includegraphics[width=.4\textwidth]{pictures/animation_states}
+  \caption{Animation state machines}
+  \label{fig:adding_animations_state_machines}
+\end{figure}
 
 \section{Comparing Unity3D with the Unreal Engine}
 
