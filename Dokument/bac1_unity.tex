@@ -39,24 +39,22 @@ anika.seibezeder@students.fh-hagenberg.at}
 \maketitle
 
 \begin{abstract}
-\emph{Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.}
+\emph{The goal of this paper is to demonstrate the simplicity of Unity3D by creating a small 3D game. The focus is not only on scripting, but also on the features of the graphical editor provided by Unity3D.  To keep costs low, only freely available assets are used.}
 \end{abstract}
 
 \begin{IEEEkeywords}
-component, formatting, style, styling, insert
+Unity3D, 3D Games, 3D Environment, Character Controls, Animations
 \end{IEEEkeywords}
 
 \section{Introduction}
-Nowadays creating realistic 3D games is getting a lot easier, due to various tools like Unity3D or the Unreal Engine. Game developers need little to no programming skills to make games in a minimum amount of time, because a great amount of premade assets and scripts are available for a very low cost. Most of the developing work can be done in the graphical editor, like creating 3D figures and adding properties, which can include self made scripts or physical properties. The majority of the existing game editors provide developing on multiple platforms including Smartphones and the most common game consoles. However Unity3D is better suited for devices with low end graphics cards, because it is more lightweight than the Unreal Engine. Compared to it, the available assets of Unity3D are not as high quality, but more economical on memory and graphics. \\ \\
-The main points of this paper are: outlining the workflow of the game development process in Unity3D which consists of creating an environment, making a Third-Person-Character and some enemies, and comparing the basic functionality and simplicity of Unity3D and the Unreal Engine. The advantages and disadvantages of both editors are examined and demonstrated. \\
+Nowadays creating realistic 3D games is getting a lot easier, due to various tools like Unity3D or the Unreal Engine. Game developers need little to no programming skills to make games in a minimum amount of time, because a great amount of premade assets and scripts are available for a very low cost. Most of the developing work can be done in the graphical editor, like creating 3D figures and adding properties, which can include self made scripts or physical properties. The majority of the existing game editors provide developing on multiple platforms including Smartphones and the most common game consoles. However Unity3D is better suited for devices with low end graphics cards, because it is more lightweight. Compared to the others, the available assets of Unity3D are not as high quality, but more economical on memory and graphics. \\ \\
+The main point of this paper is: outlining the workflow of the game development process in Unity3D which consists of creating an environment and making a Third-Person-Character and some enemies.  \\
 The first point of the game development process in Unity3D is to create an environment, with a small forest, some mountains and a few cottages. Then some textures are added to the components.
 Secondly the Third-Person-Character is linked with a  script, so it can move around in the environment.
 The third point is to create some enemies, that are chasing the player. 
 Lastly animations for both, the character and the enemies, are provided and added to the game. \\ \\
-The goal of this paper is to demonstrate the simplicity of Unity3D by creating a small 3D game in Unity3D.To keep the costs low, only freely available assets are used. The focus is not on scripting, but on the features of the graphical editor provided by Unity3D and the Unreal Engine. 
 
-
-\section{Creating an Environment}
+\section{Creating an Environment (Written by Boris Fuchs)}
 
 The following section focus at creating a simple environment with Unity3D. 
 Unity3D provides an asset store, where all necessary assets (environment, scripts, characters,...) can be obtained. Anyone can offer his asset-packs in the store and other users can buy this asset-pack then. The prices of these asset-packs have a high variation, the range is from free usage to very expensive. 
@@ -123,7 +121,7 @@ stay abreast of the same to guarantee a easy handling for users. The user has to
 The user is now able to deal with the basic features of Unity3D creating an environment. But Unity3D provides much more features, settings and possibilities to create beautiful environment combined with an easy and clear handling. This short description illuminated only the recommended points to create a simple terrain with grass, trees and textures.
 
 
-\section{Character Controls}
+\section{Character Controls (Written by Anika Seibezeder)}
 
 Character controls are a must have when developing a game. Otherwise the user would not be able to interact with a given character. No matter how hard the user is pressing a key or moving the mouse, the character still would not move at all.
 With Unity3D the user interaction can be easily made by implementing scripts and adding them to the editor via Drag and Drop. The scripts can be written in \csh, JavaScript and Boo \cite{b1}. In the editor itself there is no opportunity to write the code, but there are several supported editors such as the recommended editor MonoDevelop by Unity3D or VisualStudio by Microsoft \cite{b1}.
@@ -186,7 +184,7 @@ private void Update()
 
 The code in Listing~\ref{list:character_controls_jump_implementation} shows how to implement the Cross Platform Input Manager in the \lstinline!void Update()! function which is updated every frame. 
 
-\section{Adding Animations}
+\section{Adding Animations (Written by David Mitterlehner)}
 
 The Unity editor supports various ways of adding animations to an object. The object can be simple, like a sphere, or complex, like a humanoid character with multiple joints. Animations can be implemented by setting keyframes in the "Animation" tab. Defining new keyframes is done by clicking the record button next to the media controls and moving the time cursor to the desired frame (e.g. frame 60). Any changes made to the object in the scene, for instance scaling or rotating, will now be recorded and saved to this keyframe (60). The transitioning frames between the keyframes are generated automatically by the editor. After setting the keyframe the animation can be previewed by clicking the play button in the media controls. In figure~\ref{fig:adding_animations_keyframes} there is one starting keyframe at position 0.
 \begin{figure}[htbp]
@@ -200,11 +198,6 @@ The Unity editor supports various ways of adding animations to an object. The ob
   \caption{Animation state machines}
   \label{fig:adding_animations_state_machines}
 \end{figure}
-
-\section{Comparing Unity3D with the Unreal Engine}
-
-\emph{Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.}
-
 
 \begin{thebibliography}{00}
 \bibitem{b1} Ji Won Oak and Jae-Hwan Bae, "Development of Smart Multiplatform Game App using UNITY3D Engine for CPR Education", vol. 9, no. 7, pp. 263--268, 2014.
