@@ -61,7 +61,7 @@ Unity3D provides an asset store, where all necessary assets (environment, script
 
 \subsection{Preparing Unity3D}
 
-For building a simple environment it is required to download the basic asset-pack of Unity3D and optional some other 3D-assets like trees or stones. This short environment demo is restricted to the Unity basic asset pack. The basic asset pack can be found in the store under \emph{Unity Essentials -> Asset Packs -> Standard Assets}.
+For building a simple environment it is required to download the basic asset-pack of Unity3D and optional some other 3D-assets like trees or stones. This short environment demo is restricted to the Unity basic asset pack. The basic asset pack can be found in the store under \emph{Unity Essentials $\rightarrow$ Asset Packs $\rightarrow$ Standard Assets}.
 After this step is finished, the assets can be involved in the current project or in that project where these assets be needed.
 
  
@@ -87,7 +87,7 @@ best for altering the terrain, trying all brushes out and checking the effects w
 \subsection{Environment: Paint Textures}
 One of the most important points is painting the textures. Without textures the most objects can not be identified. 
 Like on the tab before here are also different brushes available for selection. The next step is creating a new texture. 
-To choose between the different textures of the Unity3D standard asset pack, the user has to click on \emph{edit textures-> add textures->select}. If everything worked, a view shows all available textures. The next two steps add the texture to the current project, first double click for adding the choose texture, then press add. Now the user can repeat this instructions for adding as much textures as want.
+To choose between the different textures of the Unity3D standard asset pack, the user has to click on \emph{edit textures $\rightarrow$ add textures $\rightarrow$ select}. If everything worked, a view shows all available textures. The next two steps add the texture to the current project, first double click for adding the choose texture, then press add. Now the user can repeat this instructions for adding as much textures as want.
 
 \begin{figure}[htbp]
   \includegraphics[width=.4\textwidth]{pictures/paint_textures}
@@ -96,7 +96,7 @@ To choose between the different textures of the Unity3D standard asset pack, the
 \end{figure}
 
 \subsection{Environment: Paint Trees}
-Inclose varying trees to project is nearly the same procedure as discussed in the chapter "Environment: Paint Textures". (\emph{edit trees-> add trees->tree prefab -> choose tree -> double click -> add})
+Inclose varying trees to project is nearly the same procedure as discussed in the chapter "Environment: Paint Textures". (\emph{edit trees $\rightarrow$ add trees $\rightarrow$ tree prefab $\rightarrow$ choose tree $\rightarrow$ double click $\rightarrow$ add})
 Its possible to paint only one tree or to paint a lot of trees, depending on the brush size and the opacity. Now a lot of options are available. The key-features are: Adding other trees, mixing different trees and place it with a high brush size, place only a few trees or placing a dense forest depending on the current set opacity,....
 
 
@@ -108,7 +108,7 @@ Its possible to paint only one tree or to paint a lot of trees, depending on the
 
 \subsection{Environment: Paint Details}
 The last section describes how to place grass on the terrain. The method to handle that is almost the same as before. Unity3D try’s to 
-stay abreast of the same to guarantee a easy handling for users. The user has to click once again on (\emph{edit details-> add grass texture->tree prefab}). After that, a small window appears where the user can change various settings. Inter alia it contains the minimum and maximum width and height plus settings to modify the color of the grass. (color can be change later, also when the grass is already placed) Selecting a grass is possible by clicking on detail texture and then double click on the decided grass texture like before. 
+stay abreast of the same to guarantee a easy handling for users. The user has to click once again on (\emph{edit details $\rightarrow$ add grass texture $\rightarrow$ tree prefab}). After that, a small window appears where the user can change various settings. Inter alia it contains the minimum and maximum width and height plus settings to modify the color of the grass. (color can be change later, also when the grass is already placed) Selecting a grass is possible by clicking on detail texture and then double click on the decided grass texture like before. 
 
 
 \begin{figure}[htbp]
@@ -186,22 +186,77 @@ The code in Listing~\ref{list:character_controls_jump_implementation} shows how 
 
 \section{Adding Animations (Written by David Mitterlehner)}
 
-The Unity editor supports various ways of adding animations to an object. The object can be simple, like a sphere, or complex, like a humanoid character with multiple joints. Animations can be implemented by setting keyframes in the "Animation" tab. Defining new keyframes is done by clicking the record button next to the media controls and moving the time cursor to the desired frame (e.g. frame 60). Any changes made to the object in the scene, for instance scaling or rotating, will now be recorded and saved to this keyframe (60). The transitioning frames between the keyframes are generated automatically by the editor. After setting the keyframe the animation can be previewed by clicking the play button in the media controls. In figure~\ref{fig:adding_animations_keyframes} there is one starting keyframe at position 0.
+The Unity editor supports various ways of adding animations to an object. The object can be simple, like a sphere, or complex, like a humanoid character with multiple joints. 
+
+\subsection{Keyframes}
+
+Animations can be implemented by setting keyframes in the "Animation" tab. Defining new keyframes is done by clicking the record button next to the media controls and moving the time cursor to the desired frame (e.g. frame 60). Any changes made to the object in the scene, for instance scaling or rotating, will now be recorded and saved to this keyframe (60). The transitioning frames between the keyframes are generated automatically by the editor. After setting the keyframe the animation can be previewed by clicking the play button in the media controls. In figure~\ref{fig:adding_animations_keyframes} there is one starting keyframe at position 0.
 \begin{figure}[htbp]
   \includegraphics[width=.4\textwidth]{pictures/keyframes}
   \caption{Keyframes}
   \label{fig:adding_animations_keyframes}
 \end{figure}
-\newline Multiple animations can be added to an object using state machines. State machines allow for complex transitions and event driven animations. The Unity editor provides a colored graphical overview for managing these transitions using semantics similar to state diagrams. Figure~\ref{fig:adding_animations_state_machines} shows the graphical overview of a simple state transition between to animations.
+
+\subsection{State machines}
+
+Multiple animations can be added to an object using state machines. State machines allow for complex transitions and event driven animations. The Unity editor provides a colored graphical overview for managing these transitions using semantics similar to state diagrams. Figure~\ref{fig:adding_animations_state_machines} shows the graphical overview of a simple state transition between to animations.
 \begin{figure}[htbp]
   \includegraphics[width=.4\textwidth]{pictures/animation_states}
   \caption{Animation state machines}
   \label{fig:adding_animations_state_machines}
 \end{figure}
 
+\subsection{Basic animation concepts}
+
+If keyframes are used for animating an object, say a bouncing ball, and no fine tuning of the duration of a single frame is performed, the animation isn't going to look very realistic. In 1981 Disney animators published a book called "The Illusion of Life", outlining the key concepts to making animations look realistic. In this publication, 12 concepts were defined, out of which two will be used here to illustrate how important fine tuning animations is for a natural look and feel of a 3D-game \cite{b3}.
+
+\subsection{Timing}
+
+The first, and arguably the most impactful concept covered here is timing. In the bouncing ball example, a linear progression of the frames doesn't look realistic, more frames need to be assigned to the top position (slow speed), and less to the bottom position (fast speed). In Unity this can be done by switching to the "Curves" tab on the bottom of the "Animation" tab, and editing the curve accordingly (See Figure ~\ref{fig:adding_animations_curves}). The steeper the slope, the faster the ball accelerates.
+
+\begin{figure}[htbp]
+  \includegraphics[width=.4\textwidth]{pictures/animation_curves}
+  \caption{Animation curves}
+  \label{fig:adding_animations_curves}
+\end{figure}
+
+\subsection{Squash and Stretch}
+
+Another method for making an animated object look more realistic, is to transform the scale of the object as it moves, especially when it collides with another object. It is important that the volume of the object remains constant, however. In Unity this can easily be done by editing the X,Y, and Z scaling values of the object at a specific keyframe. Figure~\ref{fig:adding_animations_scaling} shows an example of this.
+
+\begin{figure}[htbp]
+  \includegraphics[width=.4\textwidth]{pictures/animation_scale}
+  \caption{Editing the scale}
+  \label{fig:adding_animations_scaling}
+\end{figure}
+
+\subsection{Complex character animations}
+
+The bouncing ball is a trivial example, just to demonstrate the core concepts of animating in Unity. More complex animations, like character arm and leg movements, etc. can be obtained from the asset store. For example, there is a zombie asset on the store which includes walking, idle and attacking animations. An animator is also provided, which defines when, and under which conditions the animation states should be changed (Figure ~\ref{fig:adding_animations_zombie_states} and~\ref{fig:adding_animations_zombie_transition}).  To make the zombie actually walk towards the player and attack it, a script needs to be attached to it, for example the "AICharacterControl" script from the standard assets, where the player (knight) can be set as the target (See Figure~\ref{fig:adding_animations_zombie_script}).
+
+\begin{figure}[htbp]
+  \includegraphics[width=.4\textwidth]{pictures/zombie_states}
+  \caption{State diagram for the zombie character}
+  \label{fig:adding_animations_zombie_states}
+\end{figure}
+
+\begin{figure}[htbp]
+  \includegraphics[width=.4\textwidth]{pictures/zombie_transition}
+  \caption{Transitioning conditions for the zombie}
+  \label{fig:adding_animations_zombie_transition}
+\end{figure}
+
+\begin{figure}[htbp]
+  \includegraphics[width=.4\textwidth]{pictures/zombie_script}
+  \caption{Script for the zombie}
+  \label{fig:adding_animations_zombie_script}
+\end{figure}
+
+
 \begin{thebibliography}{00}
 \bibitem{b1} Ji Won Oak and Jae-Hwan Bae, "Development of Smart Multiplatform Game App using UNITY3D Engine for CPR Education", vol. 9, no. 7, pp. 263--268, 2014.
 \bibitem{b2} Unity Technologies. "Manuel:Prefabs", Publication: 2018.1-002B, 2018.
+\bibitem{b3} Thomas, Frank and Johnston, Ollie and Rawls, Walton, "Disney Animation: The Illusion of Life", 1981, Publisher: Abbeville Press New York
 \end{thebibliography}
 
 \end{document}
