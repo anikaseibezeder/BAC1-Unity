@@ -160,11 +160,11 @@ tabsize=3
 \subsection{Scripting in VisualStudio}
 
 A script is simply added by clicking the button "Add Component", choosing "New Script" and selecting the wanted language. After adding the script it can be written by double clicking the component and opening the wanted script editor. \\
-The first thing to know about writing a script for Unity3D is, that the class is extending from the \lstinline!class MonoBehaviour! and is ipmlementing the functions \lstinline!void Start()!, \lstinline!void Update()! and \lstinline!void FixedUpdate()!. 
+The first thing to know about writing a script for Unity3D is, that the class is extending from the \lstinline!class MonoBehaviour! and is implementing the functions \lstinline!void Start()!, \lstinline!void Update()! and \lstinline!void FixedUpdate()!. 
 The start function is used for variable initialization and one time execution.
 The update function is used for continuous events, like checking which key is pressed, and is updated every frame\cite{b1}. As the user may press other keys while playing the game, the statements for checking the key should be implemented in the update function. Both functions are not necessarily needed but can help building the logic of the game.
 Another important function is \lstinline!void FixedUpdate()!. Like the \lstinline!void Update()! function, it also is updated every frame and it is mainly used when dealing with the Physics of the Object \cite{b1}. \\
-When adding variables there is just a few thing to know: all \lstinline!public! variables are later shown in the component screen and can be edited there. It is also possible to import other components from the object. They are added to by using \lstinline!GetComponent<>()!
+When adding variables there are just a few things to know: all \lstinline!public! variables are later shown in the component screen and can be edited there. It is also possible to import other components from the object. They are added to by using \lstinline!GetComponent<>()!
 
 \subsection{Cross Platform Input Manager}
 
@@ -251,6 +251,10 @@ The bouncing ball is a trivial example, just to demonstrate the core concepts of
   \caption{Script for the zombie}
   \label{fig:adding_animations_zombie_script}
 \end{figure}
+
+\section{Conclusion}
+
+Unity3D provides an intuitive interface to assist the game designer throughout the entire workflow, from creating the terrain, to writing the scripts, to animating surrounding objects and the character. The asset store is one of the main features, since it frees the game designer from having to program every script themselves, or having to create 3D models from scratch. For advanced usage, everything can still be done manually, as has been shown in the "Character Controls" and "Adding Animations" sections. In conclusion, it can be said that Unity3D is a game design editor suitable for beginners, who need a lot of assistance and professionals, who want to build everything themselves.
 
 
 \begin{thebibliography}{00}
