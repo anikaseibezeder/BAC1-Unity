@@ -8,7 +8,6 @@
 \usepackage{listings}
 \usepackage{xcolor}
 \usepackage{subfig}
-\usepackage[colorlinks=true,linkcolor=black,anchorcolor=black,citecolor=black,filecolor=black,menucolor=black,runcolor=black,urlcolor=black]{hyperref}
 
 \newcommand{\csh}{C{\#}}
 
@@ -30,7 +29,7 @@ Lastly animations for both, the character and the enemies, are provided and adde
 
 \section{Prerequisite}
 \subsection{Downloading Unity3D}
-Before we can make our game, we have to download the Unity 3D engine and the editor. We can do this by going to \href{https://unity3d.com/unity}{the offical site from unity} and choosing a Version to download. The versions to choose from are \emph{Personal}, \emph{Plus} and \emph{Pro}. It is recommended to download the \emph{Personal} version, as it is free to use.
+Before we can make our game, we have to download the Unity 3D engine and editor. We can do this by going to the offical site from unity \cite{b4} and choosing a Version to download. The versions to choose from are \emph{Personal}, \emph{Plus} and \emph{Pro}. \emph{Personal} is for beginners, \emph{Plus} is for serious creators and \emph{Pro} is for professionals. It is recommended to download the \emph{Personal} version, as it is free to use.
 
 While installing unity, you may be asked, which Platforms and Standard Assets you want to use. Figure~\ref{fig:downloading_unity_components} shows exactly what we need for our project.
 
@@ -44,7 +43,7 @@ While installing unity, you may be asked, which Platforms and Standard Assets yo
 After finishing the installation, you have to register an account and log in to use the editor.
 
 \subsection{Preparing Unity3D}
-For this tutorial we will build a simple environment, for which it is required to download the basic asset-pack of Unity3D, and add some premade characters. To add the premade objects to our project, we firstly have to open the Unity Asset Store in the editor by clicking \emph{Window $\rightarrow$ Asset Store}. You may be asked to log in first, before using the store.
+For this tutorial we will build a simple environment, for which it is required to download the basic asset-pack of Unity3D first, and then add some premade characters. To add the premade objects to our project, we have to open the Unity Asset Store in the editor by clicking \emph{Window $\rightarrow$ Asset Store}. You may be asked to log in first, before using the store.
 The basic asset pack can be found under \emph{Unity Essentials $\rightarrow$ Asset Packs $\rightarrow$ Standard Assets}. The characters used in this tutorial can be found under \emph{3D $\rightarrow$ Characters $\rightarrow$ Humanoids}. We will use the prefab called \emph{Strong Knight} as our knight character and \emph{Zombie} as the enemies chasing the character.
 After clicking \emph{Add to My Assets} and finishing the download, the assets can be used in the current project.
 
@@ -122,8 +121,8 @@ For this tutorial we will use the knight character we downloaded before and comb
 
 \subsection{Adding a Character}
 
-In Unity3D adding a character is easily done by dragging a Prefab or an object into the middle screen to the wanted position. There is also another possibility by dragging the Prefab or object to the left side of the screen, where all used objects are shown. A Prefab is a pre-built object combined of one to many components \cite{b2}, like the knight we downloaded before.
-To see and edit features of our knight, a left click on it on the left side of the screen is needed. 
+In Unity3D adding a character is easily done by dragging a Prefab or an object into the scene screen to the wanted position. There is also another possibility by dragging the Prefab or object herarchy screen, where all used objects are shown. A Prefab is a pre-built object combined of one to many components \cite{b2}, like the knight we downloaded before.
+To see and edit features of our knight, a left click on it on the hierarchy screen is needed. 
 
 \begin{figure}[htbp]
   \begin{center}
@@ -135,7 +134,7 @@ To see and edit features of our knight, a left click on it on the left side of t
   \label{fig:character_controls_character_components}
 \end{figure}
 
-When we first add our knight character, his components look like it is shown in  figure~\ref{fig:character_controls_character_components_before}. As the knight needs some other components, some of the given ones, like the Character Controller and the Rotator, can be removed. The knight needs other components like a Rigidbody, which gives him a mass, a capsule collider, which triggers interrupts when colliding with other objects and the Third Person Scripts, which are premade by the Unity3D standard Asset Library. Figure~\ref{fig:character_controls_character_components_after} shows which components the knight should have.
+When we first add our knight character, his components look like shown in  figure~\ref{fig:character_controls_character_components_before}. Some of the given components of the knight, like the Character Controller and the Rotator, can be removed. The knight needs other components like a Rigidbody, which gives him a mass, a capsule collider, which triggers interrupts when colliding with other objects and the Third Person Scripts, which are premade by the Unity3D standard Asset Library. Figure~\ref{fig:character_controls_character_components_after} shows which components the knight should have.
 
 \lstloadlanguages{[Sharp]C}
 \lstset{
@@ -155,34 +154,8 @@ tabsize=3
 \lstset{backgroundcolor=\color{listinggray}}
 \lstset{language=[Sharp]C}
 
-\subsection{Scripting in VisualStudio}
+\subsection{Changing the Camera}
 
-A new script is simply added by clicking the button "Add Component", choosing "New Script" and selecting the wanted language. After adding the script it can be written by double clicking the component and opening the wanted script editor. \\
-The first thing to know about writing a script for Unity3D is, that the class is extending from the \lstinline!class MonoBehaviour! and is implementing the functions \lstinline!void Start()!, \lstinline!void Update()! and \lstinline!void FixedUpdate()!. 
-The start function is used for variable initialization and one time execution.
-The update function is used for continuous events, like checking which key is pressed, and is updated every frame\cite{b1}. As the user may press other keys while playing the game, the statements for checking the key should be implemented in the update function. Both functions are not necessarily needed but can help building the logic of the game.
-Another important function is \lstinline!void FixedUpdate()!. Like the \lstinline!void Update()! function, it also is updated every frame and it is mainly used when dealing with the Physics of the Object \cite{b1}. \\
-When adding variables there are just a few things to know: all \lstinline!public! variables are later shown in the component screen and can be edited there. It is also possible to import other components from the object. They are added to by using \lstinline!GetComponent<>()!
-
-\subsection{Cross Platform Input Manager}
-
-The Cross Platform Input Manager can be used to determine how keys or actions should be interpreted. For example there can be an entry considering jumping with a character, which defines, that a jump on a Desktop or Laptop is made with pressing the spacebar, while on the smartphone a touch gesture activates the jump. After defining the inputs, they can be used with \lstinline!CrossPlatformInputManager.GetButtonDown("Jump")!. \\
-
-\begin{lstlisting}[caption=Example Implementation for Determining a Jump,label=list:character_controls_jump_implementation]
-private bool isJumping;
-
-private void Update()
-{
-	if (!isJumping)
-	{
-		isJumping = CrossPlatformInputManager.GetButtonDown("Jump");
-	}
-}
-\end{lstlisting}
-
-The code in Listing~\ref{list:character_controls_jump_implementation} shows how to implement the Cross Platform Input Manager in the \lstinline!void Update()! function which is updated every frame. \\
-
-As we use the premade Third Person Scripts from Unity, we don't need to add a new script or define new inputs with the Cross Platform Input Manager.
 
 \section{Adding Animations}
 
@@ -270,5 +243,6 @@ Unity3D provides an intuitive interface to assist the game designer throughout t
 \bibitem{b1} Ji Won Oak and Jae-Hwan Bae, "Development of Smart Multiplatform Game App using UNITY3D Engine for CPR Education", vol. 9, no. 7, pp. 263--268, 2014.
 \bibitem{b2} Unity Technologies. "Manuel:Prefabs", Publication: 2018.1-002B, 2018.
 \bibitem{b3} Thomas, Frank and Johnston, Ollie and Rawls, Walton, "Disney Animation: The Illusion of Life", 1981, Publisher: Abbeville Press New York
+\bibitem{b4} https://unity3d.com/unity
 \end{thebibliography}
 \end{document}
