@@ -29,7 +29,7 @@ Lastly animations for both, the character and the enemies, are provided and adde
 
 \section{Prerequisite}
 \subsection{Downloading Unity3D}
-Before we can make our game, we have to download the Unity 3D engine and editor. We can do this by going to the offical site from unity \cite{b4} and choosing a Version to download. The versions to choose from are \emph{Personal}, \emph{Plus} and \emph{Pro}. \emph{Personal} is for beginners, \emph{Plus} is for serious creators and \emph{Pro} is for professionals. It is recommended to download the \emph{Personal} version, as it is free to use.
+Before we can make our game, we have to download the Unity 3D engine and editor. We can do this by going to the offical site from unity \cite{b4} and choosing a version to download. The versions to choose from are \emph{Personal}, \emph{Plus} and \emph{Pro}. \emph{Personal} is for beginners, \emph{Plus} is for serious creators and \emph{Pro} is for professionals. It is recommended to download the \emph{Personal} version, as it is free to use.
 
 While installing unity, you may be asked, which Platforms and Standard Assets you want to use. Figure~\ref{fig:downloading_unity_components} shows exactly what we need for our project.
 
@@ -44,7 +44,7 @@ After finishing the installation, you have to register an account and log in to 
 
 \subsection{Preparing Unity3D}
 For this tutorial we will build a simple environment, for which it is required to download the basic asset-pack of Unity3D first, and then add some premade characters. To add the premade objects to our project, we have to open the Unity Asset Store in the editor by clicking \emph{Window $\rightarrow$ Asset Store}. You may be asked to log in first, before using the store.
-The basic asset pack can be found under \emph{Unity Essentials $\rightarrow$ Asset Packs $\rightarrow$ Standard Assets}. The characters used in this tutorial can be found under \emph{3D $\rightarrow$ Characters $\rightarrow$ Humanoids}. We will use the prefab called \emph{Strong Knight} as our knight character and \emph{Zombie} as the enemies chasing the character.
+The basic asset pack can be found under \emph{Unity Essentials $\rightarrow$ Asset Packs $\rightarrow$ Standard Assets}\cite{b7}. The characters used in this tutorial can be found under \emph{3D $\rightarrow$ Characters $\rightarrow$ Humanoids}. We will use the prefab called \emph{Strong Knight}\cite{b5} as our knight character and \emph{Zombie}\cite{b6}  as the enemies chasing the character.
 After clicking \emph{Add to My Assets} and finishing the download, the assets can be used in the current project.
 
 \section{Creating an Environment}
@@ -117,11 +117,11 @@ The user is now able to deal with the basic features of Unity3D creating an envi
 
 Character controls are a must have when developing a game. Otherwise the user would not be able to interact with a given character. No matter how hard the user is pressing a key or moving the mouse, the character still would not move at all.
 With Unity3D the user interaction can be easily made by implementing scripts and adding them to the editor via Drag and Drop. The scripts can be written in \csh, JavaScript and Boo \cite{b1}. In the editor itself there is no opportunity to write the code, but there are several supported programming editors such as the recommended editor MonoDevelop by Unity3D or VisualStudio by Microsoft \cite{b1}. \\
-For this tutorial we will use the knight character we downloaded before and combine him with the Third Person User Control Script from the Standard Assets.
+For this tutorial we will use the knight character we downloaded before and combine him with the \emph{Third Person User Control} Script from the Standard Assets.
 
 \subsection{Adding a Character}
 
-In Unity3D adding a character is easily done by dragging a Prefab or an object into the scene screen to the wanted position. There is also another possibility by dragging the Prefab or object herarchy screen, where all used objects are shown. A Prefab is a pre-built object combined of one to many components \cite{b2}, like the knight we downloaded before.
+In Unity3D adding a character is easily done by dragging a Prefab or an object into the scene screen to the wanted position. There is also another possibility by dragging the Prefab or object into the hierarchy screen, where all used objects are shown. A Prefab is a pre-built object combined of one to many components \cite{b2}, like the knight we downloaded before.
 To see and edit features of our knight, a left click on it on the hierarchy screen is needed. 
 
 \begin{figure}[htbp]
@@ -134,28 +134,22 @@ To see and edit features of our knight, a left click on it on the hierarchy scre
   \label{fig:character_controls_character_components}
 \end{figure}
 
-When we first add our knight character, his components look like shown in  figure~\ref{fig:character_controls_character_components_before}. Some of the given components of the knight, like the Character Controller and the Rotator, can be removed. The knight needs other components like a Rigidbody, which gives him a mass, a capsule collider, which triggers interrupts when colliding with other objects and the Third Person Scripts, which are premade by the Unity3D standard Asset Library. Figure~\ref{fig:character_controls_character_components_after} shows which components the knight should have.
-
-\lstloadlanguages{[Sharp]C}
-\lstset{
-basicstyle=\ttfamily\small,
-numbers=left,
-breaklines=true,
-numberstyle=\tiny,
-numbersep=5pt,
-tabsize=3
-}
-\definecolor{listinggray}{gray}{0.95}
-\definecolor{keyword}{rgb}{0.4, 0, 0.1}
-\definecolor{comment}{rgb}{0, 0.4, 0}
-
-\lstset{keywordstyle=\color{keyword}\bfseries}
-\lstset{commentstyle=\color{comment}}
-\lstset{backgroundcolor=\color{listinggray}}
-\lstset{language=[Sharp]C}
+When we first add our knight character, his components look like shown in  figure~\ref{fig:character_controls_character_components_before}. Some of the given components of the knight, like the \emph{Character Controller} and the \emph{Rotator}, can be removed. The knight needs other components like a \emph{Rigidbody}, which gives him a mass, a \emph{Capsule Collider}, which triggers interrupts when colliding with other objects and the \emph{Third Person Scripts}, which are premade by the Unity3D standard Asset Library. Figure~\ref{fig:character_controls_character_components_after} shows which components the knight should have.
 
 \subsection{Changing the Camera}
 
+At the beginning of our example there will be a main camera in the hierarchy screen. Cameras in Unity3D are used to display specific content to the user. The main camera in Unity3D is a static camera which means, the camera doesn't move when the character is moving. But in many Roll Playing Games, the camera is following the character. \\
+To implement this first delete the main camera and then go to \emph{Assets $\rightarrow$ Standard Assets $\rightarrow$ Cameras $\rightarrow$ Prefabs} and add the \emph{FreeLookCameraRig} to the scene by dragging it into the hierarchy screen. First thing to change is the position of the camera. We want the camera to be behind the character and we can do this by simply dragging the camera in the scene screen to the specific position. Next thing to do is to choose our knight character as the target at the \emph{Free Look Cam} script.  We also can change the move or turn speed of the camera to make the transitions faster.
+
+\begin{figure}[htbp]
+  \begin{center}
+    \subfloat[Camera Components before]{\label{fig:character_controls_camera_components_before}\includegraphics[width=.4\textwidth]{pictures/character_controls_camera_components_before}}
+    \hspace{0.5in}
+    \subfloat[Camera Components after]{\label{fig:character_controls_camera_components_after}\includegraphics[width=.4\textwidth]{pictures/character_controls_camera_components_after}}
+  \end{center}
+  \caption{A Comparison of what Components a camera needs}
+  \label{fig:character_controls_camera_components}
+\end{figure}
 
 \section{Adding Animations}
 
@@ -244,5 +238,8 @@ Unity3D provides an intuitive interface to assist the game designer throughout t
 \bibitem{b2} Unity Technologies. "Manuel:Prefabs", Publication: 2018.1-002B, 2018.
 \bibitem{b3} Thomas, Frank and Johnston, Ollie and Rawls, Walton, "Disney Animation: The Illusion of Life", 1981, Publisher: Abbeville Press New York
 \bibitem{b4} https://unity3d.com/unity
+\bibitem{b5} https://assetstore.unity.com/packages/3d/characters/humanoids/strong-knight-83586
+\bibitem{b6} https://assetstore.unity.com/packages/3d/characters/humanoids/zombie-30232 
+\bibitem{b7} https://assetstore.unity.com/packages/essentials/asset-packs/standard-assets-32351
 \end{thebibliography}
 \end{document}
