@@ -5,6 +5,7 @@
 \usepackage{algorithmic}
 \usepackage{graphicx}
 \usepackage{textcomp}
+\usepackage{float}
 \usepackage{listings}
 \usepackage{xcolor}
 \usepackage{subfig}
@@ -18,14 +19,6 @@
 \begin{document}
 \maketitle
 \tableofcontents 
-
-\section{Introduction to Unity3D}
-Nowadays creating realistic 3D games is getting a lot easier, due to various tools like Unity3D or the Unreal Engine. Game developers need little to no programming skills to make games in a minimum amount of time, because a great amount of premade assets and scripts are available for a very low cost. Most of the developing work can be done in the graphical editor, like creating 3D figures and adding properties, which can include self made scripts or physical properties. The majority of the existing game editors provide developing on multiple platforms including Smartphones and the most common game consoles. However Unity3D is better suited for devices with low end graphics cards, because it is more lightweight. Compared to the others, the available assets of Unity3D are not as high quality, but more economical on memory and graphics. \\ \\
-The main point of this paper is: outlining the workflow of the game development process in Unity3D which consists of creating an environment and making a Third-Person-Character and some enemies.  \\
-The first point of the game development process in Unity3D is to create an environment, with a small forest, some mountains and a few cottages. Then some textures are added to the components.
-Secondly the Third-Person-Character is linked with a  script, so it can move around in the environment.
-The third point is to create some enemies, that are chasing the player. 
-Lastly animations for both, the character and the enemies, are provided and added to the game. \\ \\
 
 \section{Prerequisite}
 \subsection{Downloading Unity3D}
@@ -124,7 +117,7 @@ For this tutorial we will use the knight character we downloaded before and comb
 In Unity3D adding a character is easily done by dragging a Prefab or an object into the scene screen to the wanted position. There is also another possibility by dragging the Prefab or object into the hierarchy screen, where all used objects are shown. A Prefab is a pre-built object combined of one to many components \cite{b2}, like the knight we downloaded before.
 To see and edit features of our knight, a left click on it on the hierarchy screen is needed. 
 
-\begin{figure}[htbp]
+\begin{figure}[H]
   \begin{center}
     \subfloat[Knights Components before]{\label{fig:character_controls_character_components_before}\includegraphics[width=.4\textwidth]{pictures/character_controls_character_components_before}}
     \hspace{0.5in}
@@ -141,7 +134,7 @@ When we first add our knight character, his components look like shown in  figur
 At the beginning of our example there will be a main camera in the hierarchy screen. Cameras in Unity3D are used to display specific content to the user. The main camera in Unity3D is a static camera which means, the camera doesn't move when the character is moving. But in many Roll Playing Games, the camera is following the character. \\
 To implement this first delete the main camera and then go to \emph{Assets $\rightarrow$ Standard Assets $\rightarrow$ Cameras $\rightarrow$ Prefabs} and add the \emph{FreeLookCameraRig} to the scene by dragging it into the hierarchy screen. First thing to change is the position of the camera. We want the camera to be behind the character and we can do this by simply dragging the camera in the scene screen to the specific position. Next thing to do is to choose our knight character as the target at the \emph{Free Look Cam} script.  We also can change the move or turn speed of the camera to make the transitions faster.
 
-\begin{figure}[htbp]
+\begin{figure}[H]
   \begin{center}
     \subfloat[Camera Components before]{\label{fig:character_controls_camera_components_before}\includegraphics[width=.4\textwidth]{pictures/character_controls_camera_components_before}}
     \hspace{0.5in}
@@ -155,57 +148,10 @@ To implement this first delete the main camera and then go to \emph{Assets $\rig
 
 The Unity editor supports various ways of adding animations to an object. The object can be simple, like a sphere, or complex, like a humanoid character with multiple joints. 
 
-\subsection{Keyframes}
-
-Animations can be implemented by setting keyframes in the "Animation" tab. Defining new keyframes is done by clicking the record button next to the media controls and moving the time cursor to the desired frame (e.g. frame 60). Any changes made to the object in the scene, for instance scaling or rotating, will now be recorded and saved to this keyframe (60). The transitioning frames between the keyframes are generated automatically by the editor. After setting the keyframe the animation can be previewed by clicking the play button in the media controls. In figure~\ref{fig:adding_animations_keyframes} there is one starting keyframe at position 0.
-
-\begin{figure}[htbp]
-  \centering
-  \includegraphics[width=.4\textwidth]{pictures/keyframes}
-  \caption{Keyframes}
-  \label{fig:adding_animations_keyframes}
-\end{figure}
-
-\subsection{State machines}
-
-Multiple animations can be added to an object using state machines. State machines allow for complex transitions and event driven animations. The Unity editor provides a colored graphical overview for managing these transitions using semantics similar to state diagrams. Figure~\ref{fig:adding_animations_state_machines} shows the graphical overview of a simple state transition between to animations.
-
-\begin{figure}[htbp]
-  \centering
-  \includegraphics[width=.4\textwidth]{pictures/animation_states}
-  \caption{Animation state machines}
-  \label{fig:adding_animations_state_machines}
-\end{figure}
-
-\subsection{Basic animation concepts}
-
-If keyframes are used for animating an object, say a bouncing ball, and no fine tuning of the duration of a single frame is performed, the animation isn't going to look very realistic. In 1981 Disney animators published a book called "The Illusion of Life", outlining the key concepts to making animations look realistic. In this publication, 12 concepts were defined, out of which two will be used here to illustrate how important fine tuning animations is for a natural look and feel of a 3D-game \cite{b3}.
-
-\subsection{Timing}
-
-The first, and arguably the most impactful concept covered here is timing. In the bouncing ball example, a linear progression of the frames doesn't look realistic, more frames need to be assigned to the top position (slow speed), and less to the bottom position (fast speed). In Unity this can be done by switching to the "Curves" tab on the bottom of the "Animation" tab, and editing the curve accordingly (See Figure ~\ref{fig:adding_animations_curves}). The steeper the slope, the faster the ball accelerates.
-
-\begin{figure}[htbp]
-  \centering
-  \includegraphics[width=.4\textwidth]{pictures/animation_curves}
-  \caption{Animation curves}
-  \label{fig:adding_animations_curves}
-\end{figure}
-
-\subsection{Squash and Stretch}
-
-Another method for making an animated object look more realistic, is to transform the scale of the object as it moves, especially when it collides with another object. It is important that the volume of the object remains constant, however. In Unity this can easily be done by editing the X,Y, and Z scaling values of the object at a specific keyframe. Figure~\ref{fig:adding_animations_scaling} shows an example of this.
-
-\begin{figure}[htbp]
-  \centering
-  \includegraphics[width=.4\textwidth]{pictures/animation_scale}
-  \caption{Editing the scale}
-  \label{fig:adding_animations_scaling}
-\end{figure}
 
 \subsection{Complex character animations}
 
-The bouncing ball is a trivial example, just to demonstrate the core concepts of animating in Unity. More complex animations, like character arm and leg movements, etc. can be obtained from the asset store. For example, there is a zombie asset on the store which includes walking, idle and attacking animations. An animator is also provided, which defines when, and under which conditions the animation states should be changed (Figure ~\ref{fig:adding_animations_zombie_states} and~\ref{fig:adding_animations_zombie_transition}).  To make the zombie actually walk towards the player and attack it, a script needs to be attached to it, for example the "AICharacterControl" script from the standard assets, where the player (knight) can be set as the target (See Figure~\ref{fig:adding_animations_zombie_script}).
+Complex animations, like character arm and leg movements, etc. can be obtained from the asset store. For example, there is a zombie asset on the store which includes walking, idle and attacking animations. An animator is also provided, which defines when, and under which conditions the animation states should be changed (Figure ~\ref{fig:adding_animations_zombie_states} and~\ref{fig:adding_animations_zombie_transition}).  To make the zombie actually walk towards the player and attack it, a script needs to be attached to it, for example the "AICharacterControl" script from the standard assets, where the player (knight) can be set as the target (See Figure~\ref{fig:adding_animations_zombie_script}).
 
 \begin{figure}[htbp]
   \centering
@@ -228,15 +174,10 @@ The bouncing ball is a trivial example, just to demonstrate the core concepts of
   \label{fig:adding_animations_zombie_script}
 \end{figure}
 
-\section{Conclusion}
-
-Unity3D provides an intuitive interface to assist the game designer throughout the entire workflow, from creating the terrain, to writing the scripts, to animating surrounding objects and the character. The asset store is one of the main features, since it frees the game designer from having to program every script themselves, or having to create 3D models from scratch. For advanced usage, everything can still be done manually, as has been shown in the "Character Controls" and "Adding Animations" sections. In conclusion, it can be said that Unity3D is a game design editor suitable for beginners, who need a lot of assistance and professionals, who want to build everything themselves.
-
 
 \begin{thebibliography}{00}
 \bibitem{b1} Ji Won Oak and Jae-Hwan Bae, "Development of Smart Multiplatform Game App using UNITY3D Engine for CPR Education", vol. 9, no. 7, pp. 263--268, 2014.
 \bibitem{b2} Unity Technologies. "Manuel:Prefabs", Publication: 2018.1-002B, 2018.
-\bibitem{b3} Thomas, Frank and Johnston, Ollie and Rawls, Walton, "Disney Animation: The Illusion of Life", 1981, Publisher: Abbeville Press New York
 \bibitem{b4} https://unity3d.com/unity
 \bibitem{b5} https://assetstore.unity.com/packages/3d/characters/humanoids/strong-knight-83586
 \bibitem{b6} https://assetstore.unity.com/packages/3d/characters/humanoids/zombie-30232 
